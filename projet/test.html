@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Structure de base HTML 5 </title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style2.css" type="text/css">
+</head>
+
+<body>
+    <p class="red"> Hello World</p>
+    <p>trop bien je suis vivant</p>
+    <h1>yo</h1>
+    <h2>ouais</h2>
+    <h3>super</h3>
+    <h4>j'ai plu d'idée</h4>
+    <h5>enfin bon</h5>
+    <h6>yes </h6>
+    <table>
+        <caption>Superheros and sidekicks</caption>
+        <colgroup>
+            <col>
+            <col span="2" class="batman">
+            <col span="2" class="flash">
+        </colgroup>
+        <tr>
+            <td> </td>
+            <th scope="col">Batman</th>
+            <th scope="col">Robin</th>
+            <th scope="col">The Flash</th>
+            <th scope="col">Kid Flash</th>
+        </tr>
+        <tr>
+            <th scope="row">Skill</th>
+            <td>Smarts</td>
+            <td>Dex, acrobat</td>
+            <td>Super speed</td>
+            <td>Super speed</td>
+        </tr>
+    </table>
+    <ol>
+        <li>j'adore</li>
+        <li>oui</li>
+    </ol>
+    <table>
+        <colgroup>
+            <col class="premiereColonne">
+            <col class="deuxDernieresColonnes" span="2">
+        </colgroup>
+        <tr>
+            <th>Citron vert</th>
+            <th>Citron</th>
+            <th>Orange</th>
+        </tr>
+        <tr>
+            <td>Vert</td>
+            <td>Jaune</td>
+            <td>Orange</td>
+        </tr>
+    </table>
+    <dialog id="favDialog">
+        <form method="dialog">
+            <p><label>Animal préféré :
+                    <select>
+                        <option></option>
+                        <option>Panda roux</option>
+                        <option>Macrotus</option>
+                        <option>Koala</option>
+                    </select>
+                </label></p>
+            <menu>
+                <button value="cancel">Annuler</button>
+                <button id="confirmBtn" value="default">Confirmer</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <menu>
+        <button id="updateDetails">Mettre à jour les détails</button>
+    </menu>
+
+    <output aria-live="polite"></output>
+    <fieldset>
+        <legend>Choose your favorite monster</legend>
+
+        <input type="radio" id="kraken" name="monster">
+        <label for="kraken">Kraken</label><br />
+
+        <input type="radio" id="sasquatch" name="monster">
+        <label for="sasquatch">Sasquatch</label><br />
+
+        <input type="radio" id="mothman" name="monster">
+        <label for="mothman">Mothman</label>
+    </fieldset>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Un champ pour le choix de la radio</legend>
+            <input type="radio" name="radio" id="radio">
+            <label for="radio">Cliquez ici</label>
+        </fieldset>
+    </form>
+    <p>Cryptids of Cornwall:</p>
+
+    <dl>
+        <dt>Beast of Bodmin</dt>
+        <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+        <dt>Morgawr</dt>
+        <dd>A sea serpent.</dd>
+
+        <dt>Owlman</dt>
+        <dd>A giant owl-like creature.</dd>
+    </dl>
+    <form action="" method="get" class="form-example">
+        <div class="form-example">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-example">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-example">
+            <input type="submit" value="Subscribe!">
+        </div>
+    </form>
+    <!-- Formulaire simple qui enverra une requête GET -->
+    <form action="" method="get">
+        <label for="GET-name">Nom :</label>
+        <input id="GET-name" type="text" name="name">
+        <input type="submit" value="Enregistrer">
+    </form>
+
+    <!-- Formulaire simple qui enverra une requête POST -->
+    <form action="" method="post">
+        <label for="POST-name">Nom :</label>
+        <input id="POST-name" type="text" name="name">
+        <input type="submit" value="Enregistrer">
+    </form>
+
+    <!-- Formulaire avec un fieldset, un legend, et un label -->
+    <form action="" method="post">
+        <fieldset>
+            <legend>Titre</legend>
+            <input type="radio" name="radio" id="radio"> <label for="radio">Cliquez moi</label>
+        </fieldset>
+    </form>
+    <menu>
+        <button> <a href="page2.html" title="Clique salope">Aller à la page 2</a></button>
+    </menu>
+</body>
+
+<script src="js/Script.js"></script>
+
+
+</html>

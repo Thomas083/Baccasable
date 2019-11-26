@@ -1,0 +1,7 @@
+1 ---------------------
+
+				git config --global http.sslVerify false
+
+
+2 ---------------------
+				git config --global http.proxy http://proxy.realyce.fr:8181

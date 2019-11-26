@@ -1,0 +1,58 @@
+import { Component, OnInit } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
+import { IonicStorageModule } from '@ionic/storage';
+// ionic serve : lance la commande dans le répertoire de l'application
+// 
+@Component({
+  selector: 'app-tab4',
+  templateUrl: './tab4.page.html',
+  styleUrls: ['./tab4.page.scss'],
+})
+export class Tab4Page implements OnInit {
+
+  displayForm : boolean;
+  todo = {};
+
+  constructor(public actionSheetCtrl: ActionSheetController) { this.displayForm = false;}
+
+  ngOnInit() {
+  }
+
+  async openMenu() {
+     const actionSheet = await this.actionSheetCtrl.create(
+      {
+        header: "Ajout rappel",
+        buttons: [
+          {
+            text: 'Ajouter',
+            role: 'add',
+            handler:() => {
+              console.log('Ajout demandé');
+              this.displayForm = true;
+            }
+          },
+          {
+            text : 'Fermé',
+            role : 'cancel',
+            handler:() => {
+              console.log('Annulé');
+            }
+
+          }
+        ]
+
+      });
+  actionSheet.present();
+
+  }
+
+  async save() {
+
+    console.log(this.todo);
+
+  }
+}
+
+// Storage initialisation 
+// ionic cordova plugin  add cordova-sqlite-storage
+// npm install --save @ionic/storage
